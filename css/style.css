@@ -1,0 +1,754 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: inherit;
+}
+
+.bodyIndex {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.1fr 0.05fr auto 0.5fr;
+    grid-template-areas: "header header header header"
+                         "navbar navbar navbar navbar"
+                         "main main main main"
+                         "footer footer footer footer";
+}
+
+header {
+    grid-area: header;
+    background-color: black;
+}
+
+.logo {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.navbar {
+    grid-area: navbar;
+    background: black;
+    margin-top: -0.1rem;
+}
+
+.navbar ul {
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: 0.3rem;
+    padding: 0;
+}
+
+.navbar ul li a {
+    display: block;
+    text-decoration: none;
+    text-decoration-color: #fff;
+    color: #fff;
+    font-size: 1.2rem;
+
+}
+
+.mainNosotros {
+    grid-area: main;
+}
+
+.cuerpo {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "cero cero cero cero"
+        "nos nos nos nos"
+        "foto foto foto foto"
+        "consejos consejos consejos consejos";
+}
+
+.cero {
+    grid-area: cero;
+    background-image: url(../img/tattoo1.jpg);
+    background-size: cover;
+    padding: 6vh 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.uno {
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: 4%;
+    line-height: 1;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.uno h1 {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+.dos {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    margin-top: 1rem;
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, .4);
+    cursor: pointer;
+    border-color: #fff;
+    color: #fff;
+}
+
+.social {
+    display: none;
+}
+
+.nosotros {
+    grid-area: nos;
+    background-color: rgba(0, 0, 0, 0.925);
+    color: #fff;
+    padding: 2.5rem 1rem;
+}
+
+.nosotros h2 span {
+    display: none;
+}
+
+.nosotrosPc {
+    display: none;
+}
+
+.nosotrosTexto {
+    margin-top: 0.5rem;
+}
+
+.nosotrosCel {
+    margin-top: 0.5rem;
+}
+
+.fotoNosotros {
+    grid-area: foto;
+    width: 100%;
+    margin: 4% auto;
+    padding: 8px;
+    text-align: center;
+}
+
+.tatuadores {
+    display: inline-block;
+    margin: 0 4rem;
+    padding-bottom: 1.2rem;
+}
+
+.tatuadores a {
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+}
+
+.tatuadores img {
+    width: 180px;
+    border-radius: 50%;
+}
+
+.consejos {
+    grid-area: consejos;
+    background-color: rgba(0, 0, 0, .925);
+    color: #fff;
+    padding: 1.5rem 1rem;
+}
+
+.consejos p {
+    margin-top: 0.5rem;
+}
+
+footer {
+    grid-area: footer;
+    color: white;
+    background-image: url(../img/tattoo4.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-top: 3%;
+}
+
+.logoFooter {
+    display: none;
+}
+
+footer h4 {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: lighter;
+    padding-bottom: 1%;
+    padding-top: 10%;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    text-decoration-color: #fff;
+    color: #fff;
+}
+
+.column {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "column2 column2 column2 column2";
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.column1 {
+    display: none;
+}
+
+.column2 {
+    grid-area: column2;
+    padding: 5%;
+}
+
+.column3 {
+    display: none;
+}
+
+footer h4 {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: lighter;
+    padding-top: 5%;
+    color: #fff;
+}
+
+/*grid html pages*/
+
+body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.1fr 0.05fr auto 0.5fr;
+    grid-template-areas: "header header header header"
+        "navbar navbar navbar navbar"
+        "mainT mainT mainT mainT"
+        "footer footer footer footer";
+}
+
+header {
+    grid-area: header;
+}
+
+.navbar {
+    grid-area: navbar;
+}
+
+main {
+    grid-area: mainT;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/*tatuajes y piercings html*/
+
+.TattooPics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-tattoo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 5%;
+}
+
+.cardTatt {
+    border: 1px solid black;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardTatt img {
+    width: 100%;
+}
+
+.cardTatt img:hover {
+    transform: scale(1.1);
+}
+
+/*contacto html*/
+
+
+.bodyContactos{
+    background-image: url(../img/tattoo1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+form h3{
+    color: #fff;
+    margin: 0 11rem;
+    border-radius: 10px;
+}
+
+iframe{
+    display: none;
+}
+form {
+    padding-top: 2rem;
+    text-align: center;
+    position: relative;
+    background: rgba(0,0,0,.4);
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    position: relative;
+    z-index: 0;
+}
+
+input {
+    padding: 10px;
+    width: 350px;
+    margin: 10px;
+    border: 0;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+}
+
+textarea {
+    padding: 10px;
+    width: 350px;
+    margin: 10px;
+    resize: vertical;
+    border-radius: 15px;
+    border: 0;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+    height: 150px;
+}
+
+input[type=submit] {
+    padding: 10px;
+    width: 170px;
+    border: 0;
+    box-shadow: 0 0 15px 5px rgba(49, 46, 46, 0.06);
+    border-radius: 10px;
+}
+
+input[type=submit]:hover {
+    background-color: #676968;
+    color: #fff;
+}
+
+input[type=reset] {
+    padding: 10px;
+    width: 170px;
+    border: 0;
+    box-shadow: 0 0 15px 5px rgba(49, 46, 46, 0.06);
+    border-radius: 10px;
+}
+
+input[type=reset]:hover {
+    background-color: #676968;
+    color: #fff;
+}
+
+
+
+
+@media screen and (min-width:720px) {
+
+    .uno h1 {
+        font-size: 2.5rem;
+    }
+
+    .dos span {
+        font-size: 2.5rem;
+    }
+
+    .social {
+        display: none;
+    }
+
+    .nosotros {
+        padding: 2rem;
+    }
+
+    .nosotros h2 {
+        text-align: center;
+        padding-bottom: 0.7rem;
+        font-size: 1.8rem;
+    }
+
+    .nosotros h2 span {
+        display: block;
+        display: inline-block;
+    }
+
+    .nosotros p {
+        padding: 1rem 3rem;
+        text-align: justify;
+    }
+
+    .nosotrosPc {
+        display: block;
+        padding-top: 0.3rem;
+    }
+
+    #fotoTatuadores {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "diego garo"
+            "gera cami";
+    }
+
+    #tatuador1 {
+        grid-area: diego;
+    }
+
+    #tatuador2 {
+        grid-area: garo;
+    }
+
+    #tatuador3 {
+        grid-area: gera;
+    }
+
+    #tatuador4 {
+        grid-area: cami;
+    }
+
+    .consejos h2 {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .consejos p {
+        padding: 2% 4%;
+    }
+
+    /* contacto html*/
+
+    .bodyContactos{
+        background-image: none;
+    }
+
+    form {
+        display: flex;
+        flex-direction: wrap;
+        justify-content: end;
+        gap: 100px;
+        position: relative;
+        
+    }
+    
+    iframe {
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        filter: grayscale(1);
+    }
+    
+    iframe:hover {
+        filter: none;
+    }
+    
+    fieldset {
+        border: none;
+        margin-bottom: 5%;
+        margin-top: 5%;
+        position: relative;
+        z-index: 0;
+    }
+    
+    input {
+        padding: 10px;
+        width: 350px;
+        margin: 10px;
+        border: 0;
+        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.06);
+        border-radius: 10px;
+    }
+    
+    textarea {
+        padding: 10px;
+        width: 350px;
+        margin: 10px;
+        resize: vertical;
+        border-radius: 15px;
+        border: 0;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+        height: 150px;
+    }
+    
+    input[type=submit] {
+        padding: 10px;
+        width: 170px;
+        border: 0;
+        box-shadow: 0 0 15px 5px rgba(49, 46, 46, 0.06);
+        border-radius: 10px;
+    }
+    
+    input[type=submit]:hover {
+        background-color: #3C415C;
+        color: #fff;
+    }
+    
+    input[type=reset] {
+        padding: 10px;
+        width: 170px;
+        border: 0;
+        box-shadow: 0 0 15px 5px rgba(49, 46, 46, 0.06);
+        border-radius: 10px;
+    }
+    
+    input[type=reset]:hover {
+        background-color: #3C415C;
+        color: #fff;
+    }
+
+    form h3{
+        display: none;
+    }
+
+}
+
+@media screen and (min-width:1260px) {
+
+    .logo {
+        margin: 0.7rem;
+        background-color: black;
+        position: sticky;
+        position: fixed;
+        z-index: 2;
+    }
+
+    header .navbar {
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
+        position: fixed;
+        text-align: right;
+        z-index: 1;
+    }
+
+    .navbar {
+        margin: 0;
+        padding: 0px 20px;
+        background-color: black;
+        top: 0px;
+        position: sticky;
+        z-index: 1;
+    }
+
+    .navbar ul {
+        justify-content: flex-end;
+    }
+
+    .navbar ul li {
+        margin: 1rem;
+    }
+
+    .navbar ul li a {
+        font-size: 1.5rem;
+        position: relative;
+    }
+
+    .navbar ul li a,
+    .navbar ul li a:after,
+    .navbar ul li a:before {
+        transition: all .5s;
+    }
+
+    .navbar ul li a:after,
+    .navbar ul li a:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: '.';
+        color: transparent;
+        background: #aaa;
+        height: 1px;
+    }
+
+    .navbar ul li a:hover:after {
+        width: 100%;
+    }
+
+    .uno h1 {
+        font-size: 4rem;
+        padding-bottom: 1.2rem;
+    }
+
+    .dos span {
+        font-size: 4rem;
+    }
+
+    .dos:hover{
+        background-color: #301B3F;
+        border: none;
+    }
+
+    /* social */
+
+    .social {
+        display: block;
+    }
+
+    .facebook {
+        position: fixed;
+        top: 44%;
+        right: 1%;
+    }
+
+    .instagram {
+        position: fixed;
+        top: 50%;
+        right: 1%;
+    }
+
+    .whatsapp {
+        position: fixed;
+        top: 56%;
+        right: 1%;
+    }
+
+    /* nosotros */
+
+    .nosotros h2 span {
+        display: block;
+        display: inline-block;
+    }
+
+    .nosotrosTexto {
+        font-size: 1.5rem;
+    }
+
+    .nosotrosPc {
+        display: block;
+    }
+
+    .nosotrosCel {
+        font-size: 1.5rem;
+    }
+
+    /*foto tatuadores*/
+
+    #fotoTatuadores {
+        display: block;
+    }
+
+    .tatuadores figcaption {
+        font-size: 1.5rem;
+    }
+
+    .consejos {
+        margin-bottom: -2.7rem;
+    }
+
+    .consejos p {
+        font-size: 1.5rem;
+    }
+
+    /*footer*/
+
+    footer{
+        font-size: 1.5rem;
+    }
+
+    .logoFooter {
+        display: block;
+        margin: 0.3rem;
+    }
+
+    .column {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "column1 column2 column3";
+    }
+
+    .column1 {
+        display: block;
+        grid-area: column1;
+        margin: 4% 20%;
+    }
+
+    .column1 ul li {
+        list-style-type: none;
+    }
+
+    .column1 ul li a {
+        text-decoration: none;
+        text-decoration-color: #fff;
+    }
+
+    .column1 ul li a:hover{
+        color: #B4A5A5;
+    }
+
+    .column2 a:hover{
+        color: #B4A5A5;
+    }
+
+    .column3 {
+        display: block;
+        grid-area: column3;
+        text-align: center;
+        padding-top: 5%;
+    }
+
+    .column3 input {
+        padding: 0.5rem;
+        width: 19.5rem;
+        margin: 0.5rem;
+        border: 0;
+        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.06);
+        border-radius: 10px;
+    }
+
+    .column3 input[type=submit] {
+        padding: 0.5rem;
+        width: 19.5rem;
+        border: 0;
+        box-shadow: 0 0 15px 5px rgba(49, 46, 46, 0.06);
+        border-radius: 10px;
+    }
+
+    .column3 input[type=submit]:hover {
+        background-color: #301B3F;
+        color: #fff;
+    }
+
+    
+
+
+
+}
